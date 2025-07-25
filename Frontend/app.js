@@ -27,7 +27,7 @@ convertBtn.addEventListener('click', async () => {
 
   try {
     toggleOutputLoader(true);
-    const response = await fetch('http://localhost:3000/convert-code', {
+    const response = await fetch('https://code-ai-backend.vercel.app/convert-code', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({ code, targetLanguage: selectedLanguage }),
@@ -53,7 +53,7 @@ debugBtn.addEventListener('click', async () => {
 
   try {
     toggleOutputLoader(true);
-    const response = await fetch('http://localhost:3000/debug-code', {
+    const response = await fetch('https://code-ai-backend.vercel.app/debug-code', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({ code }),
@@ -79,7 +79,7 @@ qualityBtn.addEventListener('click', async () => {
 
   try {
     toggleOutputLoader(true);
-    const response = await fetch('http://localhost:3000/check-code-quality', {
+    const response = await fetch('https://code-ai-backend.vercel.app/check-code-quality', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({ code }),
